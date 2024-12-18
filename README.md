@@ -5,7 +5,7 @@
 ## Sobre
 Esta aplicação consome uma API de rádio permitindo aos usuários terem uma experiência nostálgica.
 
-Você pode acessá-la [aqui]()
+Você pode acessá-la [aqui](https://frontend-radio-browser-one.vercel.app/)
 
 ## ⚙️ Tecnologias
 
@@ -15,6 +15,7 @@ Você pode acessá-la [aqui]()
 - **Lucide React**: Biblioteca de ícones.[lucide](https://lucide.dev/guide/packages/lucide-react)
 - **ReactJs**: Utilizei o [ReactJs](https://react.dev/) para criar as interfaces de usuário.
 - **TypeScrit**: Adotei o TypeScript como a linguagem da minha aplicação.
+- **Vercel**: Realizei o deploy da aplicação na plaforma da [Vercel](https://vercel.com/new)
 
 > [!NOTE]
 > Tanto a biblioteca **ReactJs** quanto a linguagem **TypeScript** são definidas por meio da ferramenta **Vite** durante a construção do projeto.
