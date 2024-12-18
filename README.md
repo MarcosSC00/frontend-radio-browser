@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Frontend Radio Browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+>  This is a challenge by [Coodesh](https://coodesh.com/)
 
-Currently, two official plugins are available:
+## Sobre
+Esta aplicação consome uma API de rádio permitindo aos usuários terem uma experiência nostálgica.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Você pode acessá-la [aqui]()
 
-## Expanding the ESLint configuration
+## ⚙️ Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Vite**: utilizei o [vite](https://vite.dev/) como ferramenta de construção para a aplicação.
+- **Axios**: Para realizar as chamadas à API utilizei o [axios](https://axios-http.com/ptbr/docs/intro)
+- **Tailwindcss**: Framework reponsável pela estilição dos componentes da aplicação.[tailwindcss](https://tailwindcss.com/)
+- **Lucide React**: Biblioteca de ícones.[lucide](https://lucide.dev/guide/packages/lucide-react)
+- **ReactJs**: Utilizei o [ReactJs](https://react.dev/) para criar as interfaces de usuário.
+- **TypeScrit**: Adotei o TypeScript como a linguagem da minha aplicação.
 
-- Configure the top-level `parserOptions` property like this:
+> [!NOTE]
+> Tanto a biblioteca **ReactJs** quanto a linguagem **TypeScript** são definidas por meio da ferramenta **Vite** durante a construção do projeto.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Como Usar 
+
+> [!IMPORTANT]
+> É necessário ter o [Node.js](https://nodejs.org/en) instalado em sua máquina para executar este projeto.
+
+- Clone este repositório em sua máquina com o comando:
+
+```bash
+git clone https://github.com/MarcosSC00/frontend-radio-browser
+```
+- Em seguida abra o diretório no seu terminal ou IDE e instale as dependências do projeto com o comando:
+
+```bash
+npm install
+```
+- Inicie o servidor de desenvolvimento com o comando:
+
+```bash
+npm run dev
+```
+Se tudo estiver correto você poderá acessar o projeto em seu navegador pela URL informada no terminal.
+
+Exemplo: 
+
+```node
+> Local: http://localhost:5173/
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contatos
+- Email: [msilvachaves02@gmail.com](msilvachaves02@gmail.com)
+- Telefone/Celular: (98) 98248-8698
