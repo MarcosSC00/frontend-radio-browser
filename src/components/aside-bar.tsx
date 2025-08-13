@@ -12,6 +12,7 @@ interface AsideBarProps extends ComponentProps<'aside'> { }
 export function AsideBar({ className }: AsideBarProps) {
 
     const [stations, setStations] = useState<StationData[]>([])
+    const [stationsResearched, setStationsResearched] = useState<StationData[]>([])
     const [isSelected, setIsSelected] = useState<Record<string, boolean>>({})
     const [search, setSearch] = useState('')
     const { favStations, addStation } = useFavStations()
@@ -27,6 +28,12 @@ export function AsideBar({ className }: AsideBarProps) {
         }
         getStations()
     }, [])
+
+    useEffect(() => {
+        setStationsResearched(search != '' ? searchStation(search, stations) :
+            stations)
+
+    }, [stationsResearched, search])
 
     function addSelect(station: StationData) {
         const id = station.stationuuid
@@ -68,12 +75,6 @@ export function AsideBar({ className }: AsideBarProps) {
         setPage(totalPages)
     }
 
-    useEffect(() => {
-        setStations(search != '' ? searchStation(search, favStations) :
-            favStations)
-
-    }, [search])
-
     return (
         <aside
             className={twMerge("w-64 overflow-y-auto z-20 bg-gray-800 flex-shrink-0 scrollbar scrollbar-track-slate-700 scrollbar-thumb-slate-600 py-5", className)}
@@ -85,8 +86,8 @@ export function AsideBar({ className }: AsideBarProps) {
                     className="px-2 mb-5"
                 />
                 <ul>
-                    {stations || stations !== null ? (
-                        stations.slice((page - 1) * 10, page * 10).map((l) => (
+                    {stationsResearched !== null ? (
+                        stationsResearched.slice((page - 1) * 10, page * 10).map((l) => (
                             <li className="px-2 py-3" key={l.stationuuid}>
                                 <CardGender
                                     addFav={() => addSelect(l)}
@@ -97,7 +98,16 @@ export function AsideBar({ className }: AsideBarProps) {
                             </li>
                         ))
                     ) : (
-                        <span />
+                        stations.slice((page - 1) * 10, page * 10).map((l) => (
+                            <li className="px-2 py-3" key={l.stationuuid}>
+                                <CardGender
+                                    addFav={() => addSelect(l)}
+                                    name={l.name}
+                                    isSelected={isSelected[l.stationuuid]}
+                                    disabled={isSelected[l.stationuuid]}
+                                />
+                            </li>
+                        ))
                     )}
                 </ul>
 
