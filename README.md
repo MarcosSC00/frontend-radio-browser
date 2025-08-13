@@ -30,7 +30,7 @@ Você pode acessá-la [aqui](https://frontend-radio-browser-one.vercel.app/)
 ```bash
 git clone https://github.com/MarcosSC00/frontend-radio-browser
 ```
-- Em seguida abra o diretório no seu terminal ou IDE e instale as dependências do projeto com o comando:
+- Em seguida abra o diretório no seu terminal ou IDE, vá até a pasta `\frontend-radio-browser`  e instale as dependências do projeto com o comando:
 
 ```bash
 npm install
